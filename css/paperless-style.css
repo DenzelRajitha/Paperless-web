@@ -5,7 +5,6 @@
 /* black - #051133 */
 
 html {
-  scroll-behavior: ;
 }
 
 * {
@@ -98,20 +97,38 @@ hr {
     justify-content: center;
 }
 
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
 .hide {
     opacity: 0;
 }
 
+.pc {
+    display: none;
+}
 
 @media(min-width:768px){
     
     h1 {
-        font-size: 90px;
+        font-size: 70px;
+        margin: 0 0 20px 0;
     }
     
     h2 {
         font-size: 60px;
         margin: 00;
+    }
+
+    h3 {
+        font-size: 20px;
+        line-height: 50%;
+    }
+    
+    p {
+        margin: 20px;
     }
     
     .img-box img {
@@ -127,16 +144,25 @@ hr {
         height: auto;
         width: 100%;
     }
-    
-    p {
-        max-width: 800px;
-    }
 
     a:hover {
         color: #B9A96E; 
     }
 
+    .section {
+        padding: 120px 10%;
+    }
 
+    .pc {
+        display: block;
+    }
+
+}
+
+@media(min-width:1200px){
+    h1 {
+        font-size: 90px;
+    }
 }
 
 /*----------------------- Nav -----------------------*/
@@ -224,7 +250,15 @@ a.nav-brand {
     width: 100%;
 }
 
+.social-links {
+    display: flex;
+}
+
 @media(min-width:768px) {
+
+    .nav-brand {
+        max-width: 25vw;
+    }
     
     #menu-btn {
         display: none;
@@ -246,11 +280,12 @@ a.nav-brand {
     
     .links-div {
         height: 100%;
-        width: 100%;
+        width: 80vw;
         padding: 0;
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: flex-end;
     }
 
     
@@ -259,7 +294,7 @@ a.nav-brand {
         font-style: normal;
         opacity: 1;
         font-size: 16px;
-        padding-left: 0px;
+        padding-left: 2vw;
     }
 
 }
@@ -273,6 +308,24 @@ a.nav-brand {
 .hero .img-box img {
     width: 100%;
     height: calc(100vh - 80px);
+}
+
+.hero .action {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    right: 0%;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .action h1 {
+    color: white;
+    text-align: left;
+    margin: 0;
 }
 
 .down {
@@ -316,7 +369,7 @@ a.nav-brand {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}    
+}
 
 .app .detail p {
     text-align: left;
@@ -326,12 +379,17 @@ a.nav-brand {
     
     .app .details {
         flex-direction: row;
+        margin-top: 40px;
     }
     
     .app .detail {
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .app .detail h2 {
+        font-size: 4vw;
     }
     
     .app .detail p {
@@ -380,6 +438,35 @@ a.nav-brand {
     width: 50%;
     display: flex;
     flex-direction: column;
+}
+
+@media (min-width:768px) {
+    
+    .how p {
+        font-size: 16px;
+        margin: 5% 10%;
+    }
+
+    .how .step {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/*------------------- Get it -------------------*/
+
+.get-it {
+}
+
+@media (min-width:768px) {
+
+    .get-it {
+        flex-direction: row;
+    }
+
+    .get-it h1, .get-it p {
+        text-align: left;
+    }
 }
 
 
