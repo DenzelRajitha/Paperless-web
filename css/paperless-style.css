@@ -4,9 +4,6 @@
 /* dark - #807A6E */
 /* black - #051133 */
 
-html {
-}
-
 * {
     box-sizing: border-box;
 }
@@ -16,6 +13,8 @@ body{
     overflow-x: hidden;
     max-width: 100vw;
 }
+
+/*------------------- Type -------------------*/
 
 h1 {
     font-family: 'Poppins', sans-serif;
@@ -54,6 +53,8 @@ p {
     margin: 0;
 }
 
+/*------------------- Elements -------------------*/
+
 a {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
@@ -74,7 +75,28 @@ hr {
     margin: 20px 0;
 }
 
+.app-links {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.button.appstore {
+    display: block;
+    margin: 50px 10px;
+    overflow: hidden;
+}
+
+.button.appstore img {
+    width: 135px;
+    padding: 0;
+    margin: 0;
+}
+
+/*------------------- Blocks -------------------*/
+
 .section {
+    position: relative;
     width: 100%;
     padding: 10% 5% 10% 5%;
     overflow: hidden;
@@ -88,19 +110,13 @@ hr {
     padding: 0;
 }
 
-.img-box {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .col {
     display: flex;
     flex-direction: column;
+    align-self: center;
 }
+
+/*------------------- other -------------------*/
 
 .hide {
     opacity: 0;
@@ -131,26 +147,16 @@ hr {
         margin: 20px;
     }
     
-    .img-box img {
-        height: auto;
-        width: 100%;
-    }
-
-    .img-stationery {
-        height: auto;
-    }
-
-    .img-stationery img {
-        height: auto;
-        width: 100%;
-    }
-
     a:hover {
         color: #B9A96E; 
     }
 
     .section {
         padding: 120px 10%;
+    }
+
+    .mobile {
+        display: none;
     }
 
     .pc {
@@ -305,24 +311,24 @@ a.nav-brand {
     height: 80px;
 }
 
-.hero .img-box img {
-    width: 100%;
-    height: calc(100vh - 80px);
+.hero .hero-img img {
+    width: 100vw;
 }
 
 .hero .action {
     position: absolute;
-    width: 60%;
+    width: 60vw;
     height: 100%;
-    right: 0%;
-    padding: 10%;
+    left: 0%;
+    padding: 5%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
 .hero .action h1 {
+    font-size: 30px;
     color: white;
     text-align: left;
     margin: 0;
@@ -333,28 +339,46 @@ a.nav-brand {
     width: 20px;
 }
 
+.hero .overlay {
+    position: absolute;
+    height: calc(100vh - 80px);
+    width: 100%;
+    background-color: #0e0f0f;
+}
+
 @media(min-width:768px) {
-    
-    #land {
-        height: 100vh;;
+
+    .hero .hero-img img {
+        width: auto;
+    }
+
+    .hero .action h1 {
+        font-size: 40px;
+    }
+
+    .hero .action {
+        position: absolute;
+        width: 60%;
+        height: 100%;
+        left: auto;
+        right: 0%;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
     }
     
-    #land .img-box {
-        height: calc(90vh - 80px);
+    .hero .action h1 {
+        color: white;
+        text-align: left;
+        margin: 0;
     }
     
     .down {
         position: absolute;
         top: 92vh;
     }
-    
-    .section.intro {
-        padding: 50px 0 100px 0;
-    }
-    
-    .section.intro p {
-        width: 600px
-}
 
 }
 
@@ -455,7 +479,8 @@ a.nav-brand {
 
 /*------------------- Get it -------------------*/
 
-.get-it .col-01 {
+.get-it.section .col {
+    
 }
 
 @media (min-width:768px) {
@@ -479,6 +504,8 @@ a.nav-brand {
         margin: 0;
     }
 }
+
+@media (min-width:768px) 
 
 
 /*------------------- Footer -------------------*/
