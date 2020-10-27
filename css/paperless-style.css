@@ -1,9 +1,6 @@
 
 /*------------------- Global styling -------------------*/
 
-/* dark - #807A6E */
-/* black - #051133 */
-
 * {
     box-sizing: border-box;
 }
@@ -40,7 +37,7 @@ h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 24px;
-    line-height: 100%;
+    line-height: auto;
     margin: 5% 0;
     color: #0e0f0f;
 }
@@ -76,7 +73,6 @@ p {
 
     h3 {
         font-size: 30px;
-        line-height: 50%;
     }
     
     h4 {
@@ -107,7 +103,7 @@ a {
 
 hr {
     width: 100%;
-    border-top: #0e0f0f solid 1px;
+    border-top: #0e0f0f solid 2px;
     margin: 20px 0;
 }
 
@@ -648,9 +644,10 @@ a.nav-brand {
 .accordion {
     padding: 10px 0;
     cursor: pointer;
+    margin: 0;
 }
 
-.accordion h2, .accordion p {
+.accordion h3, .accordion p {
     text-align: left;
     margin-left: 0;
 }
@@ -662,4 +659,11 @@ a.nav-brand {
 
 .accordion.active .para {
     height: auto;
+}
+
+@media (min-width:768px) {
+
+    .accordion h3 {
+        margin: 10px 0;
+    }
 }
