@@ -645,7 +645,21 @@ a.nav-brand {
 
 /*------------------- FAQ -------------------*/
 
-.single-q h2, .single-q p {
+.accordion {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.accordion h2, .accordion p {
     text-align: left;
     margin-left: 0;
+}
+
+.accordion .para {
+    height: 0;
+    overflow: hidden;
+}
+
+.accordion.active .para {
+    height: auto;
 }
