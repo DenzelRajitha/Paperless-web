@@ -85,6 +85,7 @@ p {
 
     p {
         margin: 20px;
+        max-width: 1000px;
     }
 }
 
@@ -124,12 +125,13 @@ a.button {
 .app-links {
     width: 100%;
     display: flex;
+    justify-content: center;
 }
 
 .button.appstore {
     min-width: 135px;
     display: block;
-    margin: 20px 30px 0 0;
+    margin: 10px ;
     padding: 0;
     overflow: hidden;
     background-color: transparent;
@@ -139,7 +141,12 @@ a.button {
     width: 135px;
 }
 
-@media(min-width:1200px) {
+@media(min-width:768px) {
+
+    .app-links {
+        width: 100%;
+        justify-content: flex-start;
+    }
 
     .button.appstore {
         margin: 20px 30px 0 0;
@@ -458,7 +465,7 @@ a.nav-brand {
 }
 
 .app .details .line{
-    height: 2px;
+    height: 1px;
     width: 100%;
     background-color: #0e0f0f;
     margin: 10px 0;
@@ -472,6 +479,7 @@ a.nav-brand {
     }
     
     .app .detail {
+        width: 25%;
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -483,7 +491,7 @@ a.nav-brand {
 
     .app .details .line{
         height: auto;
-        width: 2px;
+        width: 1px;
         margin: 0;
     }
     
@@ -495,7 +503,7 @@ a.nav-brand {
     background-color: #0e0f0f;
 }
 
-.how h1, .how h3, .how h4 {
+.how h1, .how h2, .how h3, .how h4 {
     color: white;
 }
 
@@ -525,6 +533,10 @@ a.nav-brand {
     flex-direction: column;
 }
 
+.how .tracing h2 {
+    margin: 50px 0;
+}
+
 @media (min-width:768px) {
     
     .how p {
@@ -536,6 +548,10 @@ a.nav-brand {
         display: flex;
         align-items: center;
     }
+
+    .how .tracing p {
+        text-align: center;
+    } 
 }
 
 /*------------------- Get it -------------------*/
@@ -625,4 +641,11 @@ a.nav-brand {
         justify-content: flex-start;
     }
 
+}
+
+/*------------------- FAQ -------------------*/
+
+.single-q h2, .single-q p {
+    text-align: left;
+    margin-left: 0;
 }
